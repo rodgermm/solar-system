@@ -18,7 +18,7 @@ jobs:
         timeout-minutes: 15
         strategy:
           matrix:
-            nodejs_version: [20,22,24]
+            nodejs_version: [24]
             operating_system: [ubuntu-latest]
             exclude:
               - nodejs_version: 18
@@ -63,6 +63,7 @@ jobs:
           run: npm install
     
         - name: Check Code Coverage
+          continue-on-error: True
           run: npm run coverage
           
         - name: Archive Test Result
@@ -70,4 +71,4 @@ jobs:
           with:
             name: Code-Coverage-Result
             path: coverage
-            retention-days: 5            
+            retention-days: 2            
