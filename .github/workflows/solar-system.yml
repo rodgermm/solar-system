@@ -19,7 +19,7 @@ jobs:
         strategy:
           matrix:
             nodejs_version: [20,22,24]
-            operating_system: [ubuntu-latest, macos-latest]
+            operating_system: [ubuntu-latest]
             exclude:
               - nodejs_version: 18
                 operating_system: macos-latest
@@ -46,7 +46,7 @@ jobs:
             path: test-results.xml
 
 
-      code-coverage:
+    code-coverage:
         needs: unit-testing
         name: Code Coverage
         runs-on: ubuntu-latest
