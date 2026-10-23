@@ -10,6 +10,7 @@ on:
 jobs:
     unit-testing:
         name: Unit Testing
+        timeout-minutes: 15
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
