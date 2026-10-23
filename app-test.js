@@ -109,8 +109,8 @@ describe('Planets API Suite', () => {
               .send(payload)
               .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.have.property('id').eql(7ERRRRRRRRRRRRRRRRRRR);
-                    res.body.should.have.property('name').eql('UranusEEEEEEEEEEEEEE');
+                    res.body.should.have.property('id').eql(7);
+                    res.body.should.have.property('name').eql('Uranus');
                 done();
               });
         });
